@@ -1,0 +1,132 @@
+﻿@model OpticApp.Models.Client
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<div class="row">
+    <form asp-action="Create" class="form-horizontal">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="span12">
+
+            <div class="widget ">
+
+                <div class="widget-header">
+                    <i class="icon-user"></i>
+                    <h3>Nouveau client</h3>
+                </div> <!-- /widget-header -->
+
+                <div class="widget-content">
+
+
+                    <fieldset>
+                        <div class="control-group">
+                            <label asp-for="nom" class="control-label"></label>
+                            <div class="controls">
+                                <input asp-for="nom" class="span6" />
+                                <span asp-validation-for="nom" class="help-block"></span>
+                            </div> <!-- /controls -->
+                        </div>
+
+
+                        <div class="control-group">
+                            <label asp-for="prenom" class="control-label"></label>
+                            <div class="controls">
+                                <input asp-for="prenom" class="span6" />
+                                <span asp-validation-for="prenom" class="help-block"></span>
+                            </div> <!-- /controls -->
+                        </div>
+
+                        <div class="control-group">
+                            <label asp-for="tel" class="control-label"></label>
+                            <div class="controls">
+                                <input asp-for="tel" class="span6" />
+                                <span asp-validation-for="tel" class="help-block"></span>
+                            </div> <!-- /controls -->
+                        </div>
+
+                        <div class="control-group">
+                            <label asp-for="adresse" class="control-label"></label>
+                            <div class="controls">
+                                <input asp-for="adresse" class="span6" />
+                                <span asp-validation-for="adresse" class="help-block"></span>
+                            </div> <!-- /controls -->
+                        </div>
+
+                        <div class="control-group">
+                            <label asp-for="ville" class="control-label"></label>
+                            <div class="controls">
+                                <input asp-for="ville" class="span6" />
+                                <span asp-validation-for="ville" class="help-block"></span>
+                            </div> <!-- /controls -->
+                        </div>
+
+                        <div class="control-group">
+                            <label asp-for="mail" class="control-label"></label>
+                            <div class="controls">
+                                <input asp-for="mail" class="span6" />
+                                <span asp-validation-for="mail" class="help-block"></span>
+                            </div> <!-- /controls -->
+                        </div>
+
+                        <div class="control-group">
+                            <label asp-for="dateNaissance" class="control-label"></label>
+                            <div class="controls">
+                                <input asp-for="dateNaissance" class="span6" />
+                                <span asp-validation-for="dateNaissance" class="help-block"></span>
+                            </div> <!-- /controls -->
+                        </div>
+
+                        <div class="control-group">
+                            <label asp-for="sexe" class="control-label"></label>
+                            <div class="controls">
+                                <input asp-for="sexe" class="span6" />
+                                <span asp-validation-for="sexe" class="help-block"></span>
+                            </div> <!-- /controls -->
+                        </div>
+
+                        <div class="control-group">
+                            <label asp-for="profession" class="control-label"></label>
+                            <div class="controls">
+                                <input asp-for="profession" class="span6" />
+                                <span asp-validation-for="profession" class="help-block"></span>
+                            </div> <!-- /controls -->
+                        </div>
+
+                        <div class="control-group">
+                            <label asp-for="remarque" class="control-label"></label>
+                            <div class="controls">
+                                <input asp-for="remarque" class="span6" />
+                                <span asp-validation-for="remarque" class="help-block"></span>
+                            </div> <!-- /controls -->
+                        </div>
+                        <br />
+                        <div class="form-actions">
+
+                            <input type="submit" value="Save" class="btn btn-primary" />
+                            <a  class="btn" asp-action="Index">Retour à la Liste</a>
+                        </div>
+
+                    </fieldset>
+
+
+
+                </div> <!-- /widget-content -->
+
+            </div>
+        </div>
+
+
+
+
+</form>
+
+
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

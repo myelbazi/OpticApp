@@ -1,0 +1,67 @@
+﻿@model OpticApp.Models.TypePaiement
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="row">
+    <form asp-action="Edit" class="form-horizontal">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+        <div class="span12">
+
+            <div class="widget ">
+
+                <div class="widget-header">
+                    <i class="icon-user"></i>
+                    <h3>Edition du client</h3>
+                </div> <!-- /widget-header -->
+
+                <div class="widget-content">
+
+
+                    <fieldset>
+                        <input type="hidden" asp-for="ID" />
+                        <div class="control-group">
+                            <label asp-for="libelleTypePaiement" class="control-label"></label>
+                            <div class="controls">
+                                <input asp-for="libelleTypePaiement" class="span6" />
+                                <span asp-validation-for="libelleTypePaiement" class="help-block"></span>
+                            </div> <!-- /controls -->
+                        </div>
+                        <br />
+                        <div class="form-actions">
+
+                            <input type="submit" value="Save" class="btn btn-primary" />
+                            <a class="btn" asp-action="Index">Retour à la Liste</a>
+                        </div>
+
+
+
+                    </fieldset>
+
+
+
+                </div> <!-- /widget-content -->
+
+            </div>
+        </div>
+
+
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

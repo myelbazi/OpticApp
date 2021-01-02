@@ -1,0 +1,42 @@
+﻿@model OpticApp.Models.Vente
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Vente</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.visite)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.visite.ID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.article)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.article.ID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.articlePosition)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.articlePosition.ID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.montant)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.montant)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Retour à la Liste</a>
+</div>

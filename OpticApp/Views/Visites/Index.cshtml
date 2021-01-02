@@ -1,0 +1,430 @@
+﻿@model IEnumerable<OpticApp.Models.Visite>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+
+
+<div class="row">
+    <form asp-action="Create" class="form-horizontal">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="span12">
+
+            <div class="widget ">
+
+                <div class="widget-header">
+                    <i class="icon-user"></i>
+                    <h3>Nouvelle visite</h3>
+                </div> <!-- /widget-header -->
+
+                <div class="widget-content">
+                    <fieldset>
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>  @Html.DisplayNameFor(model => model.client) </th>
+                                    <th> @Html.DisplayNameFor(model => model.ophtalmo)</th>
+                                    <th>  @Html.DisplayNameFor(model => model.date_visite) </th>
+                                    <th> @Html.DisplayNameFor(model => model.etatVisite)</th>
+                                    <th class="td-actions"> </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td> @Html.DisplayFor(modelItem => item.client.nomComplet) </td>
+                                        <td>  @Html.DisplayFor(modelItem => item.ophtalmo) </td>
+                                        <td>  @Html.DisplayFor(modelItem => item.date_visite) </td>
+                                        <td>  @Html.DisplayFor(modelItem => item.etatVisite.libelleEtatVisite) </td>
+                                        @*<td class="td-actions"><a href="javascript:;" class="btn btn-small btn-success"><i class="btn-icon-only icon-ok"> </i></a><a href="javascript:;" class="btn btn-danger btn-small"><i class="btn-icon-only icon-remove"> </i></a></td>*@
+                                        <td class="td-actions">
+                                            @*<a href="javascript:;" class="btn btn-small btn-success"><i class="btn-icon-only icon-ok"> </i></a>
+                                                <a href="javascript:;" class="btn btn-danger btn-small"><i class="btn-icon-only icon-remove"> </i></a>*@
+
+                                            <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-small btn-success"><i class="btn-icon-only icon-edit"> </i></a>
+                                            <a asp-action="Details" asp-route-id="@item.ID" class="btn btn-small btn-success"><i class="btn-icon-only icon-folder-open"> </i></a>
+                                            <a asp-action="Delete" asp-route-id="@item.ID" class="btn btn-danger btn-small"><i class="btn-icon-only icon-remove"> </i></a>
+                                        </td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                        <br />
+                        <a asp-action="Create" class="btn  btn-success"><i class="btn-icon-only icon-plus"> </i> Nouveau</a>
+
+                    </fieldset>
+
+
+                </div> <!-- /widget-content -->
+
+            </div>
+        </div>
+    </form>
+
+
+</div>
+
+
+
+
+
+@*<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.client)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ophtalmo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.date_visite)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateLivraison)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DatePrescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OD_loinSphere)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OD_loincylindre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OD_loinAxe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OD_loinAdd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OD_loinPrisme)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OD_loinBase)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OD_IntermSphere)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OD_Intermcylindre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OD_IntermAxe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OD_IntermAdd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OD_IntermPrisme)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OD_IntermBase)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OD_presSphere)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OD_prescylindre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OD_presAxe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OD_presPrisme)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OD_presBase)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OD_ecart1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OD_ecart2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OD_ht1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OD_ht2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OD_doct1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OD_doct2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OG_loinSphere)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OG_loincylindre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OG_loinAxe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OG_loinAdd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OG_loinPrisme)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OG_loinBase)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OG_IntermSphere)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OG_Intermcylindre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OG_IntermAxe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OG_IntermAdd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OG_IntermPrisme)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OG_IntermBase)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OG_presSphere)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OG_prescylindre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OG_presAxe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OG_presPrisme)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OG_presBase)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OG_ecart1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OG_ecart2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OG_ht1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OG_ht2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OG_doct1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OG_doct2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.total)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.reste)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.attachements)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.etatVisite)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.remarques)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.client.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ophtalmo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.date_visite)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateLivraison)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DatePrescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OD_loinSphere)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OD_loincylindre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OD_loinAxe)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OD_loinAdd)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OD_loinPrisme)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OD_loinBase)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OD_IntermSphere)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OD_Intermcylindre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OD_IntermAxe)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OD_IntermAdd)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OD_IntermPrisme)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OD_IntermBase)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OD_presSphere)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OD_prescylindre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OD_presAxe)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OD_presPrisme)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OD_presBase)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OD_ecart1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OD_ecart2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OD_ht1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OD_ht2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OD_doct1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OD_doct2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OG_loinSphere)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OG_loincylindre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OG_loinAxe)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OG_loinAdd)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OG_loinPrisme)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OG_loinBase)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OG_IntermSphere)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OG_Intermcylindre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OG_IntermAxe)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OG_IntermAdd)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OG_IntermPrisme)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OG_IntermBase)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OG_presSphere)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OG_prescylindre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OG_presAxe)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OG_presPrisme)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OG_presBase)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OG_ecart1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OG_ecart2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OG_ht1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OG_ht2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OG_doct1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OG_doct2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.total)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.reste)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.attachements)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.etatVisite.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.remarques)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>*@

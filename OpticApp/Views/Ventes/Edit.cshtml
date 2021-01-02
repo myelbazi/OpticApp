@@ -1,0 +1,49 @@
+﻿@model OpticApp.Models.Vente
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Vente</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="visiteID" class="control-label"></label>
+                <select asp-for="visiteID" class="form-control" asp-items="ViewBag.visiteID"></select>
+                <span asp-validation-for="visiteID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="articleID" class="control-label"></label>
+                <select asp-for="articleID" class="form-control" asp-items="ViewBag.articleID"></select>
+                <span asp-validation-for="articleID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="articlePositionID" class="control-label"></label>
+                <select asp-for="articlePositionID" class="form-control" asp-items="ViewBag.articlePositionID"></select>
+                <span asp-validation-for="articlePositionID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="montant" class="control-label"></label>
+                <input asp-for="montant" class="form-control" />
+                <span asp-validation-for="montant" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Retour à la Liste</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

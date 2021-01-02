@@ -1,0 +1,354 @@
+﻿@model OpticApp.Models.Visite
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Visite</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.client)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.client.ID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ophtalmo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ophtalmo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.date_visite)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.date_visite)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DateLivraison)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DateLivraison)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DatePrescription)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DatePrescription)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OD_loinSphere)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OD_loinSphere)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OD_loincylindre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OD_loincylindre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OD_loinAxe)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OD_loinAxe)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OD_loinAdd)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OD_loinAdd)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OD_loinPrisme)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OD_loinPrisme)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OD_loinBase)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OD_loinBase)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OD_IntermSphere)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OD_IntermSphere)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OD_Intermcylindre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OD_Intermcylindre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OD_IntermAxe)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OD_IntermAxe)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OD_IntermAdd)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OD_IntermAdd)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OD_IntermPrisme)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OD_IntermPrisme)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OD_IntermBase)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OD_IntermBase)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OD_presSphere)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OD_presSphere)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OD_prescylindre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OD_prescylindre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OD_presAxe)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OD_presAxe)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OD_presPrisme)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OD_presPrisme)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OD_presBase)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OD_presBase)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OD_ecart1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OD_ecart1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OD_ecart2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OD_ecart2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OD_ht1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OD_ht1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OD_ht2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OD_ht2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OD_doct1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OD_doct1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OD_doct2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OD_doct2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OG_loinSphere)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OG_loinSphere)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OG_loincylindre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OG_loincylindre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OG_loinAxe)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OG_loinAxe)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OG_loinAdd)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OG_loinAdd)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OG_loinPrisme)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OG_loinPrisme)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OG_loinBase)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OG_loinBase)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OG_IntermSphere)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OG_IntermSphere)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OG_Intermcylindre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OG_Intermcylindre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OG_IntermAxe)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OG_IntermAxe)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OG_IntermAdd)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OG_IntermAdd)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OG_IntermPrisme)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OG_IntermPrisme)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OG_IntermBase)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OG_IntermBase)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OG_presSphere)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OG_presSphere)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OG_prescylindre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OG_prescylindre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OG_presAxe)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OG_presAxe)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OG_presPrisme)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OG_presPrisme)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OG_presBase)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OG_presBase)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OG_ecart1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OG_ecart1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OG_ecart2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OG_ecart2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OG_ht1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OG_ht1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OG_ht2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OG_ht2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OG_doct1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OG_doct1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OG_doct2)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OG_doct2)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.total)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.total)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.reste)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.reste)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.attachements)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.attachements)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.etatVisite)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.etatVisite.ID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.remarques)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.remarques)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Retour à la Liste</a>
+</div>

@@ -1,0 +1,168 @@
+﻿@model OpticApp.Models.Article
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="row">
+    <form class="form-horizontal">
+
+        <div class="span12">
+
+            <div class="widget ">
+
+                <div class="widget-header">
+                    <i class="icon-user"></i>
+                    <h3>Détail de l'article</h3>
+                </div> <!-- /widget-header -->
+
+                <div class="widget-content">
+
+
+                    <fieldset>
+                        <div class="control-group">
+                            <label asp-for="code" class="control-label"></label>
+                            <div class="controls">
+                                <input  readonly asp-for="code" class="span3" />
+                                <span asp-validation-for="code" class="help-block"></span>
+                            </div> <!-- /controls -->
+                        </div>
+
+
+                        <div class="control-group">
+                            <label asp-for="libelleArticle" class="control-label"></label>
+                            <div class="controls">
+                                <input  readonly asp-for="libelleArticle" class="span3" />
+                                <span asp-validation-for="libelleArticle" class="help-block"></span>
+                            </div> <!-- /controls -->
+                        </div>
+
+                        <div class="control-group">
+                            <label asp-for="prixAchat" class="control-label"></label>
+                            <div class="controls">
+                                <input readonly  asp-for="prixAchat" class="span3" />
+                                <span asp-validation-for="prixAchat" class="help-block"></span>
+                            </div> <!-- /controls -->
+                        </div>
+
+                        <div class="control-group">
+                            <label asp-for="prixVenteHT" class="control-label"></label>
+                            <div class="controls">
+                                <input readonly  asp-for="prixVenteHT" class="span3" />
+                                <span asp-validation-for="prixVenteHT" class="help-block"></span>
+                            </div> <!-- /controls -->
+                        </div>
+
+                        <div class="control-group">
+                            <label asp-for="stock" class="control-label"></label>
+                            <div class="controls">
+                                <input readonly  asp-for="stock" class="span3" />
+                                <span asp-validation-for="stock" class="help-block"></span>
+                            </div> <!-- /controls -->
+                        </div>
+                        <div class="control-group">
+                            <label asp-for="typeArticleID" class="control-label"></label>
+                            <div class="controls">
+                                <select readonly  asp-for="typeArticleID" class="form-control span3" asp-items="ViewBag.typeArticleID"></select>
+
+                            </div> <!-- /controls -->
+                        </div>
+                        <div class="control-group">
+                            <label asp-for="fournisseurID" class="control-label"></label>
+                            <div class="controls">
+                                <select readonly  asp-for="fournisseurID" class="form-control span3" asp-items="ViewBag.fournisseurID"></select>
+
+                            </div> <!-- /controls -->
+                        </div>
+
+
+
+
+
+                        <br />
+                        <div class="form-actions">
+
+                            @*<input type="submit" value="Save" class="btn btn-primary" />*@
+                            <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.ID">Edit</a>
+                            <a class="btn" asp-action="Index">Retour à la Liste</a>
+
+
+
+
+                        </div>
+
+                    </fieldset>
+
+
+
+                </div> <!-- /widget-content -->
+
+            </div>
+        </div>
+
+
+    </form>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+@*<div>
+    <h4>Article</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.code)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.code)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.libelleArticle)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.libelleArticle)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.prixAchat)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.prixAchat)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.prixVenteHT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.prixVenteHT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.stock)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.stock)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.typeArticle)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.typeArticle.ID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.fournisseur)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.fournisseur.ID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Retour à la Liste</a>
+</div>*@

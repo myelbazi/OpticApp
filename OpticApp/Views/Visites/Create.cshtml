@@ -1,0 +1,513 @@
+﻿@model OpticApp.Models.Visite
+
+@{
+    ViewData["Title"] = "Create";
+    List<OpticApp.Models.Article> ArticleVerreID = ViewBag.ArticleVerreID;
+    List<OpticApp.Models.Article> ArticleMontureID = ViewBag.ArticleMontureID;
+    List<OpticApp.Models.Article> ArticleAccessoireID = ViewBag.ArticleAccessoireID;
+
+
+}
+
+<div class="row">
+    <form asp-action="Create" class="form-horizontal">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="span12">
+
+            <div class="widget ">
+
+                <div class="widget-header">
+                    <i class="icon-user"></i>
+                    <h3>Nouvelle visite</h3>
+                </div> <!-- /widget-header -->
+
+                <div class="widget-content">
+                    <fieldset>
+
+                        <div class="span6" style="width: 538px;">
+                            <div class="control-group">
+                                <label asp-for="clientID" class="control-label"></label>
+                                <div class="controls">
+                                    <select asp-for="clientID" class="form-control span3" asp-items="ViewBag.clientID"></select>
+                                    @*<input asp-for="nom" class="span6" />
+                                        <span asp-validation-for="nom" class="help-block"></span>*@
+                                </div> <!-- /controls -->
+                            </div>
+
+                            <div class="control-group">
+                                <label asp-for="ophtalmo" class="control-label"></label>
+                                <div class="controls">
+                                    <input asp-for="ophtalmo" class="span3" />
+                                    <span asp-validation-for="ophtalmo" class="help-block"></span>
+                                </div> <!-- /controls -->
+                            </div>
+
+                            <div class="control-group">
+                                <label asp-for="DatePrescription" class="control-label"></label>
+                                <div class="controls">
+                                    <input asp-for="DatePrescription" class="span3" />
+                                    <span asp-validation-for="DatePrescription" class="help-block"></span>
+                                </div> <!-- /controls -->
+                            </div>
+
+                            <div class="control-group">
+                                <label asp-for="date_visite" class="control-label"></label>
+                                <div class="controls">
+                                    <input asp-for="date_visite" class="span3" />
+                                    <span asp-validation-for="date_visite" class="help-block"></span>
+                                </div> <!-- /controls -->
+                            </div>
+                        </div>
+
+                        <div class="span6" style="width: 538px;">
+
+                            <div class="control-group">
+                                <label asp-for="DateLivraison" class="control-label"></label>
+                                <div class="controls">
+                                    <input asp-for="DateLivraison" class="span3" />
+                                    <span asp-validation-for="DateLivraison" class="help-block"></span>
+                                </div> <!-- /controls -->
+                            </div>
+
+                            <div class="control-group">
+                                <label asp-for="remarques" class="control-label"></label>
+                                <div class="controls">
+                                    <textarea asp-for="remarques" class="span3" rows="5"></textarea>
+                                    <span asp-validation-for="remarques" class="help-block"></span>
+                                </div> <!-- /controls -->
+                            </div>
+
+                        </div>
+
+
+                    </fieldset>
+
+
+                </div> <!-- /widget-content -->
+                <br />
+                <div class="widget-content">
+                    <div class="span6" style="width: 538px;">
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th style="font-size: 25px;">  OD </th>
+                                    <th> Sphère</th>
+                                    <th> Cylindre </th>
+                                    <th>  Axe </th>
+                                    <th> Add</th>
+                                    <th> Prisme </th>
+                                    <th> Base </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th> Loin </th>
+                                    <td>  <input asp-for="OD_loinSphere" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OD_loincylindre" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OD_loinAxe" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OD_loinAdd" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OD_loinPrisme" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OD_loinBase" class="form-control OD_OG" /> </td>
+                                </tr>
+                                <tr>
+                                    <th> Interm </th>
+                                    <td>  <input asp-for="OD_IntermSphere" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OD_Intermcylindre" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OD_IntermAxe" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OD_IntermAdd" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OD_IntermPrisme" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OD_IntermBase" class="form-control OD_OG" /> </td>
+                                </tr>
+                                <tr>
+                                    <th> Près </th>
+                                    <td>  <input asp-for="OD_presSphere" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OD_prescylindre" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OD_presAxe" class="form-control OD_OG" /> </td>
+                                    <td>   </td>
+                                    <td>  <input asp-for="OD_presPrisme" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OD_presBase" class="form-control OD_OG" /> </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+
+                        <table class="table table-striped table-bordered">
+
+                            <tbody>
+                                <tr>
+                                    <th> Ecarts </th>
+                                    <td>  <input asp-for="OD_ecart1" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OD_ecart2" class="form-control OD_OG" /> </td>
+                                    <th>  Ht </th>
+                                    <td>  <input asp-for="OD_ht1" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OD_ht2" class="form-control OD_OG" /> </td>
+                                    <th>  Dctr. </th>
+                                    <td>  <input asp-for="OD_doct1" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OD_doct2" class="form-control OD_OG" /> </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+
+                    </div>
+                    <div class="span6" style="width: 538px;">
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th style="font-size: 25px;">  OG </th>
+                                    <th> Sphère</th>
+                                    <th> Cylindre </th>
+                                    <th>  Axe </th>
+                                    <th> Add</th>
+                                    <th> Prisme </th>
+                                    <th> Base </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th> Loin </th>
+                                    <td>  <input asp-for="OG_loinSphere" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OG_loincylindre" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OG_loinAxe" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OG_loinAdd" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OG_loinPrisme" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OG_loinBase" class="form-control OD_OG" /> </td>
+                                </tr>
+                                <tr>
+                                    <th> Interm </th>
+                                    <td>  <input asp-for="OG_IntermSphere" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OG_Intermcylindre" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OG_IntermAxe" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OG_IntermAdd" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OG_IntermPrisme" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OG_IntermBase" class="form-control OD_OG" /> </td>
+                                </tr>
+                                <tr>
+                                    <th> Près </th>
+                                    <td>  <input asp-for="OG_presSphere" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OG_prescylindre" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OG_presAxe" class="form-control OD_OG" /> </td>
+                                    <td>   </td>
+                                    <td>  <input asp-for="OG_presPrisme" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OG_presBase" class="form-control OD_OG" /> </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                        <table class="table table-striped table-bordered">
+
+                            <tbody>
+                                <tr>
+                                    <th> Ecarts </th>
+                                    <td>  <input asp-for="OG_ecart1" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OG_ecart2" class="form-control OD_OG" /> </td>
+                                    <th>  Ht </th>
+                                    <td>  <input asp-for="OG_ht1" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OG_ht2" class="form-control OD_OG" /> </td>
+                                    <th>  Dctr. </th>
+                                    <td>  <input asp-for="OG_doct1" class="form-control OD_OG" /> </td>
+                                    <td>  <input asp-for="OG_doct2" class="form-control OD_OG" /> </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <br />
+                <div class="widget-content">
+
+                    <div class="span6" style="width: 538px;">
+                        @*<div class="control-group">
+                                <label class="control-label"><span style="font-size:18px;font-weight:bold">Loin  </span> verre (OD)</label>
+                                <div class="controls">
+                                    <input class="span3" />
+                                    <input class="intut_50" />
+                                </div>
+                            </div>*@
+
+
+                        <div class="control-group">
+                            <label class="control-label"><span style="font-size:18px;font-weight:bold">Loin  </span> verre (OD)</label>
+                            <div class="controls">
+                                <select name="Loin_verre_OD" class="form-control span3 articleClass">
+                                    <option value="0"></option>
+                                    @{
+                                        foreach (var article in ArticleVerreID)
+                                        {
+                                            <option value="@article.ID">@article.libelleArticle</option>
+                                        }
+
+                                    }
+                                </select>
+                                <input class="intut_50 MT_articleClass" name="MT_Loin_verre_OD"  />
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="control-group">
+                            <label class="control-label"> verre (OG)</label>
+                            <div class="controls">
+                                <select name="Loin_verre_OG" class="form-control span3 articleClass">
+                                    <option value="0"></option>
+                                    @{
+                                        foreach (var article in ArticleVerreID)
+                                        {
+                                            <option value="@article.ID">@article.libelleArticle</option>
+                                        }
+
+                                    }
+                                </select>
+                                <input class="intut_50 MT_articleClass" name="MT_Loin_verre_OG"  />
+                            </div> <!-- /controls -->
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label"> Monture</label>
+                            <div class="controls">
+                                <select name="Loin_monture" class="form-control span3 articleClass">
+                                    <option value="0"></option>
+                                    @{
+                                        foreach (var article in ArticleMontureID)
+                                        {
+                                            <option value="@article.ID">@article.libelleArticle</option>
+                                        }
+
+                                    }
+                                </select>
+                                <input class="intut_50 MT_articleClass" name="MT_Loin_monture"  />
+                            </div> <!-- /controls -->
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label"><span style="font-size:18px;font-weight:bold">PRES  </span> verre (OD)</label>
+                            <div class="controls">
+                                <select name="pres_verre_OD" class="form-control span3 articleClass">
+                                    <option value="0"></option>
+                                    @{
+                                        foreach (var article in ArticleVerreID)
+                                        {
+                                            <option value="@article.ID">@article.libelleArticle</option>
+                                        }
+
+                                    }
+                                </select>
+                                <input class="intut_50 MT_articleClass" name="MT_pres_verre_OD"  />
+                            </div> <!-- /controls -->
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label"> verre (OG)</label>
+                            <div class="controls">
+                                <select name="pres_verre_OG" class="form-control span3 articleClass">
+                                    <option value="0"></option>
+                                    @{
+                                        foreach (var article in ArticleVerreID)
+                                        {
+                                            <option value="@article.ID">@article.libelleArticle</option>
+                                        }
+
+                                    }
+                                </select>
+                                <input class="intut_50 MT_articleClass" name="MT_pres_verre_OG"  />
+                            </div> <!-- /controls -->
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label"> Monture</label>
+                            <div class="controls">
+                                <select name="pres_monture" class="form-control span3 articleClass">
+                                    <option value="0"></option>
+                                    @{
+                                        foreach (var article in ArticleMontureID)
+                                        {
+                                            <option value="@article.ID">@article.libelleArticle</option>
+                                        }
+
+                                    }
+                                </select>
+                                <input class=" intut_50 MT_articleClass" name="MT_pres_monture"  />
+                            </div> <!-- /controls -->
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label"><span style="font-size:18px;font-weight:bold">Accessoires  </span></label>
+                            <div class="controls">
+                                <select name="accessoire" class="form-control span3 articleClass">
+                                    <option value="0"></option>
+                                    @{
+                                        foreach (var article in ArticleAccessoireID)
+                                        {
+                                            <option value="@article.ID">@article.libelleArticle</option>
+                                        }
+
+                                    }
+                                </select>
+                                <input class="intut_50 MT_articleClass" name="MT_accessoire"  />
+                            </div> <!-- /controls -->
+                        </div>
+                    </div>
+
+                    <div class="span6" style="width: 538px;">
+                        <div class="control-group">
+                            <label class="control-label"> Total</label>
+                            <div class="controls">
+                                <input asp-for="total" class="intut_50" name="total" value="0" />
+                            </div> <!-- /controls -->
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label"> Encaissé</label>
+                            <div class="controls">
+                                <input class="intut_50" id="encaisse" name="encaisse" />
+                            </div> <!-- /controls -->
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label"> Reste</label>
+                            <div class="controls">
+                                <input asp-for="reste" class="intut_50" name="reste" value="0" />
+                            </div> <!-- /controls -->
+                        </div>
+                        <div class="control-group">
+                            <label asp-for="etatVisiteID" class="control-label"></label>
+                            <div class="controls">
+                                <select asp-for="etatVisiteID" class="form-control" asp-items="ViewBag.etatVisiteID"></select>
+                                <span asp-validation-for="DateLivraison" class="help-block"></span>
+                            </div> <!-- /controls -->
+                        </div>
+
+
+
+
+                    </div>
+
+                    <br />
+                    <fieldset>
+                        <div class="form-actions">
+
+                            <input type="submit" value="Enregistrer la visite" class="btn btn-primary" />
+                            <input type="submit" value="Paiement" class="btn btn-primary" />
+                            <a class="btn" asp-action="Index">Retour à la Liste</a>
+                        </div>
+                    </fieldset>
+
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </form>
+
+
+</div>
+
+
+
+
+@*<script type="text/javascript">
+
+    $(document).ready(function () {
+
+    });
+
+
+    $(document).load(function () {
+
+
+    });
+
+</script>*@
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+        });
+
+
+        $(document).load(function () {
+
+        });
+
+        $(".articleClass").change(function () {
+
+        });
+
+
+        $(document).on("change", ".articleClass", function () {
+            var clickedBtnID = $(this).attr('name'); // or var clickedBtnID = this.id
+            var vv = 'MT_' + clickedBtnID;
+            //   alert('you clicked on button #' + clickedBtnID);
+
+            var v_total = 0;
+            $.ajax({
+                type: "POST",
+                url: "/Visites/AjaxMethod",
+                // data: { "name": $("#txtName").val() },
+                data: { "idArticle": $(this).attr('value') },
+                success: function (response) {
+
+                    //alert('MT_' + clickedBtnID );
+                    //alert(response);
+                    $('input[name="' + vv + '"]').val(response);
+
+
+                    $('.MT_articleClass').each(function (i, obj) {
+                        // alert($(obj).val());
+                        if ($(obj).val() != '') {
+                            v_total = v_total + parseInt($(obj).val());
+                        }
+
+                        // alert(v_total);
+                    });
+
+                    $('input[name="total"]').val(v_total);
+
+                    var encaisse = $('input[name="encaisse"]').val();
+                    if (encaisse == '') {
+                        encaisse = 0;
+                    }
+                    $('input[name="reste"]').val(v_total - encaisse);
+
+                },
+                failure: function (response) {
+                    alert(response.responseText);
+                },
+                error: function (response) {
+                    alert(response.responseText);
+                }
+            });
+
+
+        });
+
+
+
+        $("#encaisse").on("change paste keyup", function () {
+
+
+            var encaisse = $(this).val();
+            if (encaisse == '') {
+                encaisse = 0;
+            }
+
+            var total = $('input[name="total"]').val();
+            if (total == '') {
+                total = 0;
+            }
+
+            //  alert(total - encaisse);
+
+            $('input[name="reste"]').val(total - encaisse);
+
+        });
+
+    </script>
+
+}

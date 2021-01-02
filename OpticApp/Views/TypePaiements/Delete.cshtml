@@ -1,0 +1,61 @@
+﻿@model OpticApp.Models.TypePaiement
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="row">
+    <form class="form-horizontal" asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <div class="span12">
+
+            <div class="widget ">
+
+                <div class="widget-header">
+                    <i class="icon-user"></i>
+                    <h3>Détail du client</h3>
+                </div> <!-- /widget-header -->
+
+                <div class="widget-content">
+
+
+                    <fieldset>
+                        <div class="control-group">
+                            <label asp-for="libelleTypePaiement" class="control-label"></label>
+                            <div class="controls">
+                                <input asp-for="libelleTypePaiement" class="span6 " readonly />
+
+                            </div> <!-- /controls -->
+                        </div>
+                        <br />
+                        <div class="form-actions">
+
+                            <input type="submit" value="Supprimer" class="btn btn-danger" />
+                            <a class="btn" asp-action="Index">Retour à la Liste</a>
+
+
+
+
+                        </div>
+
+                    </fieldset>
+
+
+
+                </div> <!-- /widget-content -->
+
+            </div>
+        </div>
+
+
+    </form>
+
+
+</div>
+
+
+
+
+
+
+

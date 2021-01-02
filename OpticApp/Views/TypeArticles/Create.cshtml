@@ -1,0 +1,61 @@
+﻿@model OpticApp.Models.TypeArticle
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="row">
+    <form asp-action="Create" class="form-horizontal">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="span12">
+
+            <div class="widget ">
+
+                <div class="widget-header">
+                    <i class="icon-user"></i>
+                    <h3>Nouveau client</h3>
+                </div> <!-- /widget-header -->
+
+                <div class="widget-content">
+
+
+                    <fieldset>
+                        <div class="control-group">
+                            <label asp-for="libelleTypeArticle" class="control-label"></label>
+                            <div class="controls">
+                                <input asp-for="libelleTypeArticle" class="span6" />
+                                <span asp-validation-for="libelleTypeArticle" class="help-block"></span>
+                            </div> <!-- /controls -->
+                        </div>
+                        <br />
+                        <div class="form-actions">
+
+                            <input type="submit" value="Save" class="btn btn-primary" />
+                            <a class="btn" asp-action="Index">Retour à la Liste</a>
+                        </div>
+
+                    </fieldset>
+
+
+
+                </div> <!-- /widget-content -->
+
+
+
+            </div>
+            </div>
+
+
+
+
+    </form>
+
+
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

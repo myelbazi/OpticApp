@@ -1,0 +1,306 @@
+﻿@model OpticApp.Models.Visite
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Visite</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="clientID" class="control-label"></label>
+                <select asp-for="clientID" class ="form-control" asp-items="ViewBag.clientID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ophtalmo" class="control-label"></label>
+                <input asp-for="ophtalmo" class="form-control" />
+                <span asp-validation-for="ophtalmo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="date_visite" class="control-label"></label>
+                <input asp-for="date_visite" class="form-control" />
+                <span asp-validation-for="date_visite" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateLivraison" class="control-label"></label>
+                <input asp-for="DateLivraison" class="form-control" />
+                <span asp-validation-for="DateLivraison" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DatePrescription" class="control-label"></label>
+                <input asp-for="DatePrescription" class="form-control" />
+                <span asp-validation-for="DatePrescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OD_loinSphere" class="control-label"></label>
+                <input asp-for="OD_loinSphere" class="form-control" />
+                <span asp-validation-for="OD_loinSphere" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OD_loincylindre" class="control-label"></label>
+                <input asp-for="OD_loincylindre" class="form-control" />
+                <span asp-validation-for="OD_loincylindre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OD_loinAxe" class="control-label"></label>
+                <input asp-for="OD_loinAxe" class="form-control" />
+                <span asp-validation-for="OD_loinAxe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OD_loinAdd" class="control-label"></label>
+                <input asp-for="OD_loinAdd" class="form-control" />
+                <span asp-validation-for="OD_loinAdd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OD_loinPrisme" class="control-label"></label>
+                <input asp-for="OD_loinPrisme" class="form-control" />
+                <span asp-validation-for="OD_loinPrisme" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OD_loinBase" class="control-label"></label>
+                <input asp-for="OD_loinBase" class="form-control" />
+                <span asp-validation-for="OD_loinBase" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OD_IntermSphere" class="control-label"></label>
+                <input asp-for="OD_IntermSphere" class="form-control" />
+                <span asp-validation-for="OD_IntermSphere" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OD_Intermcylindre" class="control-label"></label>
+                <input asp-for="OD_Intermcylindre" class="form-control" />
+                <span asp-validation-for="OD_Intermcylindre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OD_IntermAxe" class="control-label"></label>
+                <input asp-for="OD_IntermAxe" class="form-control" />
+                <span asp-validation-for="OD_IntermAxe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OD_IntermAdd" class="control-label"></label>
+                <input asp-for="OD_IntermAdd" class="form-control" />
+                <span asp-validation-for="OD_IntermAdd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OD_IntermPrisme" class="control-label"></label>
+                <input asp-for="OD_IntermPrisme" class="form-control" />
+                <span asp-validation-for="OD_IntermPrisme" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OD_IntermBase" class="control-label"></label>
+                <input asp-for="OD_IntermBase" class="form-control" />
+                <span asp-validation-for="OD_IntermBase" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OD_presSphere" class="control-label"></label>
+                <input asp-for="OD_presSphere" class="form-control" />
+                <span asp-validation-for="OD_presSphere" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OD_prescylindre" class="control-label"></label>
+                <input asp-for="OD_prescylindre" class="form-control" />
+                <span asp-validation-for="OD_prescylindre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OD_presAxe" class="control-label"></label>
+                <input asp-for="OD_presAxe" class="form-control" />
+                <span asp-validation-for="OD_presAxe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OD_presPrisme" class="control-label"></label>
+                <input asp-for="OD_presPrisme" class="form-control" />
+                <span asp-validation-for="OD_presPrisme" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OD_presBase" class="control-label"></label>
+                <input asp-for="OD_presBase" class="form-control" />
+                <span asp-validation-for="OD_presBase" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OD_ecart1" class="control-label"></label>
+                <input asp-for="OD_ecart1" class="form-control" />
+                <span asp-validation-for="OD_ecart1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OD_ecart2" class="control-label"></label>
+                <input asp-for="OD_ecart2" class="form-control" />
+                <span asp-validation-for="OD_ecart2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OD_ht1" class="control-label"></label>
+                <input asp-for="OD_ht1" class="form-control" />
+                <span asp-validation-for="OD_ht1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OD_ht2" class="control-label"></label>
+                <input asp-for="OD_ht2" class="form-control" />
+                <span asp-validation-for="OD_ht2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OD_doct1" class="control-label"></label>
+                <input asp-for="OD_doct1" class="form-control" />
+                <span asp-validation-for="OD_doct1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OD_doct2" class="control-label"></label>
+                <input asp-for="OD_doct2" class="form-control" />
+                <span asp-validation-for="OD_doct2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OG_loinSphere" class="control-label"></label>
+                <input asp-for="OG_loinSphere" class="form-control" />
+                <span asp-validation-for="OG_loinSphere" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OG_loincylindre" class="control-label"></label>
+                <input asp-for="OG_loincylindre" class="form-control" />
+                <span asp-validation-for="OG_loincylindre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OG_loinAxe" class="control-label"></label>
+                <input asp-for="OG_loinAxe" class="form-control" />
+                <span asp-validation-for="OG_loinAxe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OG_loinAdd" class="control-label"></label>
+                <input asp-for="OG_loinAdd" class="form-control" />
+                <span asp-validation-for="OG_loinAdd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OG_loinPrisme" class="control-label"></label>
+                <input asp-for="OG_loinPrisme" class="form-control" />
+                <span asp-validation-for="OG_loinPrisme" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OG_loinBase" class="control-label"></label>
+                <input asp-for="OG_loinBase" class="form-control" />
+                <span asp-validation-for="OG_loinBase" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OG_IntermSphere" class="control-label"></label>
+                <input asp-for="OG_IntermSphere" class="form-control" />
+                <span asp-validation-for="OG_IntermSphere" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OG_Intermcylindre" class="control-label"></label>
+                <input asp-for="OG_Intermcylindre" class="form-control" />
+                <span asp-validation-for="OG_Intermcylindre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OG_IntermAxe" class="control-label"></label>
+                <input asp-for="OG_IntermAxe" class="form-control" />
+                <span asp-validation-for="OG_IntermAxe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OG_IntermAdd" class="control-label"></label>
+                <input asp-for="OG_IntermAdd" class="form-control" />
+                <span asp-validation-for="OG_IntermAdd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OG_IntermPrisme" class="control-label"></label>
+                <input asp-for="OG_IntermPrisme" class="form-control" />
+                <span asp-validation-for="OG_IntermPrisme" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OG_IntermBase" class="control-label"></label>
+                <input asp-for="OG_IntermBase" class="form-control" />
+                <span asp-validation-for="OG_IntermBase" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OG_presSphere" class="control-label"></label>
+                <input asp-for="OG_presSphere" class="form-control" />
+                <span asp-validation-for="OG_presSphere" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OG_prescylindre" class="control-label"></label>
+                <input asp-for="OG_prescylindre" class="form-control" />
+                <span asp-validation-for="OG_prescylindre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OG_presAxe" class="control-label"></label>
+                <input asp-for="OG_presAxe" class="form-control" />
+                <span asp-validation-for="OG_presAxe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OG_presPrisme" class="control-label"></label>
+                <input asp-for="OG_presPrisme" class="form-control" />
+                <span asp-validation-for="OG_presPrisme" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OG_presBase" class="control-label"></label>
+                <input asp-for="OG_presBase" class="form-control" />
+                <span asp-validation-for="OG_presBase" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OG_ecart1" class="control-label"></label>
+                <input asp-for="OG_ecart1" class="form-control" />
+                <span asp-validation-for="OG_ecart1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OG_ecart2" class="control-label"></label>
+                <input asp-for="OG_ecart2" class="form-control" />
+                <span asp-validation-for="OG_ecart2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OG_ht1" class="control-label"></label>
+                <input asp-for="OG_ht1" class="form-control" />
+                <span asp-validation-for="OG_ht1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OG_ht2" class="control-label"></label>
+                <input asp-for="OG_ht2" class="form-control" />
+                <span asp-validation-for="OG_ht2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OG_doct1" class="control-label"></label>
+                <input asp-for="OG_doct1" class="form-control" />
+                <span asp-validation-for="OG_doct1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OG_doct2" class="control-label"></label>
+                <input asp-for="OG_doct2" class="form-control" />
+                <span asp-validation-for="OG_doct2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="total" class="control-label"></label>
+                <input asp-for="total" class="form-control" />
+                <span asp-validation-for="total" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="reste" class="control-label"></label>
+                <input asp-for="reste" class="form-control" />
+                <span asp-validation-for="reste" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="attachements" class="control-label"></label>
+                <input asp-for="attachements" class="form-control" />
+                <span asp-validation-for="attachements" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="etatVisiteID" class="control-label"></label>
+                <select asp-for="etatVisiteID" class ="form-control" asp-items="ViewBag.etatVisiteID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="remarques" class="control-label"></label>
+                <input asp-for="remarques" class="form-control" />
+                <span asp-validation-for="remarques" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Retour à la Liste</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
