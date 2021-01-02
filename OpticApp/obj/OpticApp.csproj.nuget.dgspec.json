@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dell e7540\\Desktop\\optique\\OpticApp\\OpticApp\\OpticApp.csproj": {}
+    "C:\\repos\\OpticApp\\OpticApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dell e7540\\Desktop\\optique\\OpticApp\\OpticApp\\OpticApp.csproj": {
+    "C:\\repos\\OpticApp\\OpticApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dell e7540\\Desktop\\optique\\OpticApp\\OpticApp\\OpticApp.csproj",
+        "projectUniqueName": "C:\\repos\\OpticApp\\OpticApp.csproj",
         "projectName": "OpticApp",
-        "projectPath": "C:\\Users\\dell e7540\\Desktop\\optique\\OpticApp\\OpticApp\\OpticApp.csproj",
+        "projectPath": "C:\\repos\\OpticApp\\OpticApp.csproj",
         "packagesPath": "C:\\Users\\dell e7540\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dell e7540\\Desktop\\optique\\OpticApp\\OpticApp\\obj\\",
+        "outputPath": "C:\\repos\\OpticApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
