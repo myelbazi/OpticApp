@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\repos\\OpticApp\\OpticApp.csproj": {}
+    "C:\\Repo\\OpticApp\\OpticApp.csproj": {}
   },
   "projects": {
-    "C:\\repos\\OpticApp\\OpticApp.csproj": {
+    "C:\\Repo\\OpticApp\\OpticApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\OpticApp\\OpticApp.csproj",
+        "projectUniqueName": "C:\\Repo\\OpticApp\\OpticApp.csproj",
         "projectName": "OpticApp",
-        "projectPath": "C:\\repos\\OpticApp\\OpticApp.csproj",
-        "packagesPath": "C:\\Users\\dell e7540\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\OpticApp\\obj\\",
+        "projectPath": "C:\\Repo\\OpticApp\\OpticApp.csproj",
+        "packagesPath": "C:\\Users\\ZAYTOUN\\.nuget\\packages\\",
+        "outputPath": "C:\\Repo\\OpticApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\dell e7540\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ZAYTOUN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,6 +29,7 @@
         },
         "frameworks": {
           "netcoreapp3.0": {
+            "targetAlias": "netcoreapp3.0",
             "projectReferences": {}
           }
         },
@@ -40,6 +41,7 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "targetAlias": "netcoreapp3.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -90,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
