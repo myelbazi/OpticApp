@@ -10,7 +10,7 @@ using OpticApp.Models;
 
 namespace OpticApp.Controllers
 {
-    public class ArticlePositionsController : Controller 
+    public class ArticlePositionsController : Controller //test
     {
         private readonly OpticAppContext _context;
 
